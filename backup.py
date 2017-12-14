@@ -2,9 +2,9 @@ import os
 
 import time
 
-source = ['/Users/xxpang/Downloads/backup']
+source = ['/Users/name/Downloads/dir_target_backup']
 
-target_dir = ['/Users/xxpang/Downloads/beifen']
+target_dir = ['/Users/name/Downloads/dir_need_to_backup']
 
 target = target_dir + os.sep + \
          time.strftime('%Y%m%d%H%M%S') + '.zip'
