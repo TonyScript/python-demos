@@ -15,4 +15,3 @@ def insert_sorting(lists):
 				lists[j] = key
 			j -= 1
 	return lists
-insert_sorting(arglist)
