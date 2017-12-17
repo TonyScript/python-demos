@@ -51,3 +51,16 @@ def shell_sorting(lists):
     return lists
 
 shell_sorting(arglist)
+
+"""3.冒泡排序
+通过重复遍历要排序的数列，一次比较两个元素，如果它们的顺序错误
+就把它们交换过来，直到没有需要再交换的元素，也就完成了排序。
+"""
+def bubblt_sorting(lists):
+    count = len(lists)
+    for i in range(0, count):
+        for j in range(i + 1, count):
+            if lists[i] > lists[j]:
+                lists[i], lists[j] = lists[j], lists[i]
+    return lists
+
