@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "/Users/xxpang/anaconda3/bin/python"
+=======
+    "python.pythonPath": "/usr/local/bin/python3.6"
+>>>>>>> origin/master
 }
