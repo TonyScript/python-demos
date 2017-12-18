@@ -1,8 +1,6 @@
 #/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 
-arglist = [1, 1, 2, 5, 3, 90, 555, 123]
-
 """1.插入排序
     基本操作就是将一个数据插入到已经排好序的有序数据中，
     从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，
@@ -50,8 +48,6 @@ def shell_sorting(lists):
         group /= step
     return lists
 
-shell_sorting(arglist)
-
 """3.冒泡排序
 通过重复遍历要排序的数列，一次比较两个元素，如果它们的顺序错误
 就把它们交换过来，直到没有需要再交换的元素，也就完成了排序。
@@ -63,4 +59,43 @@ def bubblt_sorting(lists):
             if lists[i] > lists[j]:
                 lists[i], lists[j] = lists[j], lists[i]
     return lists
+
+"""4.快速排序
+通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据
+都比另外一部分的所有数据要小，然后再按此方法对这两部分分别进行快速
+排序，整个排序过程可以递归进行，以此达到整个数据都变成有序数列的目的。
+"""
+def quick_sorting(lists, left, right):
+    if left >= right:
+        return lists
+    key = lists[left]
+    low = left
+    high = right
+    while left < right:
+        while left < right and lists[right] >= key:
+            right -= 1
+        lists[left] = lists[right]
+        while left < right and lists[left] <= key:
+            left += 1
+        lists[right] = lists[left]
+    lists[right] = key
+    quick_sorting(lists, low, left - 1)
+    quick_sorting(lists, left + 1, high)
+    return lists
+
+"""5.直接选择排序
+第1趟，在待排序记录r1 ~ r[n]中选出最小的记录，将它与r1交换；
+第2趟，在待排序记录r2 ~ r[n]中选出最小的记录，将它与r2交换；
+以此类推，第i趟在待排序记录r[i] ~ r[n]中选出最小的记录，将
+它与r[i]交换，使有序序列不断增长直到全部排序完毕。
+"""
+def select_sorting(lists):
+    count = len(lists)
+    for i in range(0, count):
+        min = i
+        for j in range(i + 1, count):
+            if lists[min] > lists[j]:
+                min = j
+            lists[min], lists[i] = lists[i], lists[min]
+        return lists
 
