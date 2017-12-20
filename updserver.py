@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+#/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # 绑定端口:

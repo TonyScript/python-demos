@@ -1,5 +1,5 @@
 #/usr/local/bin/python3
-# coding=UTF-8
+# -*- coding: utf-8 -*-
 
 class Robot:
     """This is Class Robot

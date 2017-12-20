@@ -1,4 +1,5 @@
-# -*- coding: UTF-8 -*-
+#/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 import socket
 
 # 创建一个基于IPv4和TCP协议的Socket

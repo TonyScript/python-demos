@@ -1,3 +1,5 @@
+#/usr/local/bin/python3
+# -*- coding: utf-8 -*-
 import socket, threading, time
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # 监听端口:
